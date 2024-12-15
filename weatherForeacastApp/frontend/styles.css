@@ -1,0 +1,191 @@
+/* Global Styles */
+body {
+    
+    color: #333;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+
+
+/* Apply Montserrat font to all elements */
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400; /* Regular weight */
+}
+
+/* Specific usage with a unique class name for better control */
+.montserrat-header {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700; /* Bold weight */
+}
+
+.montserrat-button {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600; /* Semi-bold weight */
+}
+
+/* Background Wrapper */
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 115%;
+    background-image: url('backgr.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    filter: blur(8px); 
+    -webkit-filter: blur(1px); /* For Safari */
+    z-index: -1; /* Keeps it behind the content */
+}
+
+/* Container Styles */
+.container {
+    width: 80%;
+    margin: 0px auto;
+    text-align: center;
+    position: relative;
+    z-index: 1; /* Ensures content appears above the blurred background */
+    background-color: rgba(221, 213, 213, 0.7); /* Light translucent background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(197, 193, 193, 0.2);
+}
+
+/* Header Styles */
+h1 {
+    color: rgb(20, 17, 17); /* Tomato Red */
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.weather-value {
+    font-weight: bold;  /* Makes the values bold */
+    font-size: 1.2em;    /* Adjusts the size to make the values stand out more */
+}
+
+/* Form Styling */
+form {
+    margin-top: 20px;
+}
+
+label,
+input {
+    font-size: 16px;
+    color: #333;
+}
+
+input[type="text"] {
+    padding: 10px;
+    margin-top: 10px;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 12px 25px;
+    background-color: #ff6347; /* Tomato Red */
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e55347; /* Darker Tomato */
+}
+
+/* Error Message */
+.error {
+    color: red;
+    font-weight: bold;
+}
+
+
+/* Apply animation on page load */
+@keyframes swipeIn {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.weather-heading, .weather-value, .container form {
+    animation: swipeIn 1s ease-out forwards;
+    opacity: 0;
+}
+
+/* Stagger animation for different elements */
+.weather-heading {
+    animation-delay: 0.3s;
+}
+
+.weather-value {
+    animation-delay: 0.7s;
+}
+
+p {
+    animation-delay: 1s;
+}
+
+.container form {
+    animation-delay: 1.3s;
+}
+
+/* Chart Styling */
+.chart {
+    margin-top: 40px;
+    width: 80%; /* Make chart container width responsive */
+    max-width: 800px; /* Limit chart width for larger screens */
+    margin-left: auto;
+    margin-right: auto; /* Center chart */
+}
+
+.chart img {
+    width: 100%; /* Ensure the chart image auto adjusts */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    input[type="text"] {
+        width: 80%;
+    }
+
+    button {
+        width: 80%;
+    }
+
+    .container {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    input[type="text"] {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+    }
+}

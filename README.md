@@ -95,7 +95,7 @@ After deployment, Vercel will provide you with a live URL for your app. You can 
 
 
 ## Weather Data
-![Sample Homepage](weatherForeacastApp/frontend/Screenshot2024-12-16190433.png)
+![Sample weather data display](weatherForeacastApp/frontend/weather.png)
 
 
 ### API Endpoints 🌐
